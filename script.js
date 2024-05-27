@@ -143,7 +143,7 @@ function getBook(id) {
   return data.find((d) => d.id === id);
 }
 
-const book = getBook(1);
+const book = getBook(2);
 book;
 
 const { title, author, genres, pages, publicationDate, hasMovieAdaptation } =
@@ -171,6 +171,12 @@ updatedBook;
 
 const summary = `${title} is a ${pages}-pages long book, was written by ${author} and published in ${
   publicationDate.split("-")[0]
-}`; //template literals which is using "``"
+}. This book has ${hasMovieAdaptation ? "" : "not"} been adapted as a movie`; //template literals which is using "``"
 
 summary;
+
+//ternary operator
+const pagesRange = pages > 1000 ? "over a thousand" : "less than 1000"; //ternary operator
+pagesRange;
+
+console.log(`The book has ${pagesRange} pages`);
