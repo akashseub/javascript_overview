@@ -165,6 +165,12 @@ const updatedBook = {
   moviePublicationDate: "2024.05.24",
 
   //overwriting existing property using ...spread operator
-  pages: 1116,
+  pages: 1210,
 }; //spread operator on array
 updatedBook;
+
+const summary = `${title} is a ${pages}-pages long book, was written by ${author} and published in ${
+  publicationDate.split("-")[0]
+}`; //template literals which is using "``"
+
+summary;
