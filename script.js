@@ -169,9 +169,11 @@ const updatedBook = {
 }; //spread operator on array
 updatedBook;
 
-const summary = `${title} is a ${pages}-pages long book, was written by ${author} and published in ${
-  publicationDate.split("-")[0]
-}. This book has ${hasMovieAdaptation ? "" : "not"} been adapted as a movie`; //template literals which is using "``"
+const getYear = (str) => str.split("-")[0]; //arrow function
+
+const summary = `${title} is a ${pages}-pages long book, was written by ${author} and published in ${getYear(
+  publicationDate
+)}. This book has ${hasMovieAdaptation ? "" : "not"} been adapted as a movie`; //template literals which is using "``"
 
 summary;
 
